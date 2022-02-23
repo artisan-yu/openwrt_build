@@ -20,14 +20,14 @@ jobs:
           CONFIG_PACKAGE_kmod-r8168=y
           EOF
       - name: 下载dl库
-        run: make -j8 download V=s
+        run: sh ./download
       - name: 导出dl库
         uses: actions/upload-artifact@master
         with:
           name: outfile-dl-${{ github.event.inputs.devtype }}
           path: ./dl
       - name: 编译
-        run: make -j4 V=s
+        run: sh ./build
       - name: 输出文件
         uses: actions/upload-artifact@master
         with:
