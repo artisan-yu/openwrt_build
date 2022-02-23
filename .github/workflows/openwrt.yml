@@ -4,6 +4,7 @@ jobs:
   openwrt:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "核心数$(nproc)"
       - name: 获取代码
         uses: actions/checkout@v2
       - run: cd ${{ github.workspace }}
