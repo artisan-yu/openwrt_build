@@ -1,4 +1,4 @@
 git add .
 git commit -mupdate
-git push -f git@github.com:ayu-666/openwrt_build.git main
+git push -f git@github.com:ayu-666/openwrt_build.git master:main
 
