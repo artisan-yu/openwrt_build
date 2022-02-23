@@ -34,4 +34,20 @@ jobs:
           name: outfile-${{ github.event.inputs.devtype }}
           path: ./trunk/bin
       - run: echo "状态${{ job.status }}"
-
+  dl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 获取代码
+        uses: actions/checkout@v2
+      - run: cd ${{ github.workspace }}
+      - name: 更新包
+        run: |
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+      - name: 下载dl库
+        run: sh ./download
+      - name: 导出dl库
+        uses: actions/upload-artifact@master
+        with:
+          name: outfile-dl-${{ github.event.inputs.devtype }}
+          path: ./dl
