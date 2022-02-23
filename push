@@ -1,4 +1,5 @@
+d=`date`
 git add .
-git commit -mupdate
+git commit -m"$d"
 git push -f git@github.com:ayu-666/openwrt_build.git master:main
 
