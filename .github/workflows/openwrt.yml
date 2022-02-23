@@ -2,7 +2,7 @@ name: openwrt
 on: [push]
 jobs:
   openwrt:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - run: echo "核心数$(nproc)"
       - name: 获取代码
@@ -36,7 +36,7 @@ jobs:
           path: ./trunk/bin
       - run: echo "状态${{ job.status }}"
   dl:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: 获取代码
         uses: actions/checkout@v2
