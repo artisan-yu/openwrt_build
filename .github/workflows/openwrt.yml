@@ -2,7 +2,7 @@ name: openwrt
 on: [push]
 jobs:
   openwrt:
-    runs-on: ubuntu-18.04
+    runs-on: debian:8
     steps:
       - run: echo "核心数$(nproc)"
       - name: 获取代码
