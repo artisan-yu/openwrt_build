@@ -4,4 +4,5 @@
 /staging_dir
 /tmp
 /tmp*
+build.log
 /key-build*
