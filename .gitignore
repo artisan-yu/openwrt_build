@@ -3,4 +3,5 @@
 /build_dir
 /staging_dir
 /tmp
+/tmp*
 /key-build*
