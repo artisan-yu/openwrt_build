@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v2 
       - run: cd ${{ github.workspace }}
       - run: sudo apt-get update
-      - run: sudo apt-get -y install gcc g++ libcap2-bin libcap-bin  binutils bzip2 flex python perl make grep unzip gawk subversion libz-dev libc-dev git vim libncurses5-dev wget sudo curl git bison python python3
+      - run: sudo apt-get install -y uild-essential ccache ecj fastjar file g++ gawk gettext git java-propose-classpath libelf-dev libncurses5-dev libncursesw5-dev libssl-dev python python2.7-dev python3 unzip wget python3-distutils python3-setuptools python3-dev rsync subversion swig time xsltproc zlib1g-dev 
       - name: download
         run: make -j$(nproc) download V=s
       - name: export
