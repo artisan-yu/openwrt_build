@@ -1,0 +1,24 @@
+Source-Makefile: feeds/other/lean/mt/drivers/mt_wifi/Makefile
+
+Package: kmod-mt_wifi
+Menu: 1
+Submenu: Wireless Drivers
+Version: <LINUX_VERSION>+5.0.2.0-
+Depends: +wifi-l1profile @TARGET_ramips
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: MTK wifi AP driver
+Maintainer: 
+Source: 
+Type: ipkg
+Description: MTK wifi AP driver
+
+@@
+Config:
+	source "feeds/other/lean/mt/drivers/mt_wifi/config.in"
+@@
+
+
